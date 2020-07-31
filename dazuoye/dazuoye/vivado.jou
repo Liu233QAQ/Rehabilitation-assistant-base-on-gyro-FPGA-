@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Jul 27 10:08:31 2020
+# Process ID: 18488
+# Current directory: F:/xilinx_sunmervacation/dazuoye
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11020 F:\xilinx_sunmervacation\dazuoye\dazuoye.xpr
+# Log file: F:/xilinx_sunmervacation/dazuoye/vivado.log
+# Journal file: F:/xilinx_sunmervacation/dazuoye\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/xilinx_sunmervacation/dazuoye/dazuoye.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config F:/xilinx_sunmervacation/dazuoye/test_behav.wcfg
+source test.tcl
+close_sim

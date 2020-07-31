@@ -1,0 +1,124 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Wed Jul 29 16:44:41 2020
+| Host         : DESKTOP-I313GSH running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Gyro_Demo_control_sets_placed.rpt
+| Design       : Gyro_Demo
+| Device       : xc7s15
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    51 |
+| Unused register locations in slices containing registers |   168 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |           16 |
+|      2 |            2 |
+|      3 |            1 |
+|      4 |            3 |
+|      5 |            1 |
+|      6 |            5 |
+|      7 |            2 |
+|      8 |           14 |
+|     10 |            2 |
+|    16+ |            5 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              28 |           17 |
+| No           | No                    | Yes                    |              26 |           12 |
+| No           | Yes                   | No                     |              97 |           25 |
+| Yes          | No                    | No                     |             190 |           57 |
+| Yes          | No                    | Yes                    |               5 |            2 |
+| Yes          | Yes                   | No                     |               6 |            2 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------------+------------------------------------------------+-----------------------------------+------------------+----------------+
+|            Clock Signal           |                  Enable Signal                 |          Set/Reset Signal         | Slice Load Count | Bel Load Count |
++-----------------------------------+------------------------------------------------+-----------------------------------+------------------+----------------+
+|  UART_Send0/Tx_En_reg_LDC_i_1_n_0 |                                                | UART_Send0/Tx_En_reg_LDC_i_2_n_0  |                1 |              1 |
+|  clk_10/inst/clk_out1             | Driver_IIC0/IIC_Read_Data[5]_i_1_n_0           |                                   |                1 |              1 |
+|  clk_10/inst/clk_out1             | Driver_IIC0/IIC_Read_Data[1]_i_1_n_0           |                                   |                1 |              1 |
+|  clk_10/inst/clk_out1             | Driver_IIC0/SDA_Out_i_1_n_0                    | Driver_Gyro0/Enable_reg_0         |                1 |              1 |
+|  UART0/UART_Clk/clk_UART          | UART0/UART_Tx0/Tx_i_1_n_0                      |                                   |                1 |              1 |
+|  clk_10/inst/clk_out1             | Driver_IIC0/IIC_Read_Data[3]_i_1_n_0           |                                   |                1 |              1 |
+|  Driver_Gyro0/Enable_reg_i_1_n_0  |                                                |                                   |                1 |              1 |
+|  clk_10/inst/clk_out1             | Driver_IIC0/IIC_Read_Data[4]_i_1_n_0           |                                   |                1 |              1 |
+|  clk_10/inst/clk_out1             | Driver_IIC0/IIC_Read_Data[6]_i_1_n_0           |                                   |                1 |              1 |
+|  clk_10/inst/clk_out2             |                                                | UART_Send0/Tx_En_reg_LDC_i_1_n_0  |                1 |              1 |
+|  clk_10/inst/clk_out2             |                                                | UART_Send0/Tx_En_reg_LDC_i_2_n_0  |                1 |              1 |
+|  clk_10/inst/clk_out1             | Driver_IIC0/IIC_Read_Data[0]_i_1_n_0           |                                   |                1 |              1 |
+|  Driver_Gyro0/Clk_Division0/Clk   |                                                |                                   |                1 |              1 |
+|  Driver_Gyro0/Clk_Division1/Clk   |                                                |                                   |                1 |              1 |
+|  clk_10/inst/clk_out1             | Driver_IIC0/IIC_Read_Data[2]_i_1_n_0           |                                   |                1 |              1 |
+|  clk_10/inst/clk_out1             | Driver_IIC0/IIC_Read_Data[7]_i_1_n_0           |                                   |                1 |              1 |
+|  clk_10/inst/clk_out2             |                                                |                                   |                1 |              2 |
+| ~clk_10/inst/clk_out1             |                                                |                                   |                2 |              2 |
+|  Tx_ACK_BUFG                      |                                                |                                   |                1 |              3 |
+|  Driver_Gyro0/Clk_Division1/Clk   | Driver_Gyro0/Req_W_Cnt                         |                                   |                1 |              4 |
+|  Driver_Gyro0/Clk_Division0/Clk   | Driver_Gyro0/Req_R_Cnt                         |                                   |                1 |              4 |
+|  clk_10/inst/clk_out2             | UART_Send0/Pulse_Init_Flag                     | Tx_ACK_BUFG                       |                1 |              4 |
+|  clk_10/inst/clk_out1             |                                                |                                   |                5 |              5 |
+|  Tx_ACK_BUFG                      | UART_Send0/State_Temp_Cnt                      |                                   |                2 |              6 |
+| ~IIC_Busy_BUFG                    | Driver_Gyro0/p_3_in[6]                         |                                   |                2 |              6 |
+| ~IIC_Busy_BUFG                    |                                                |                                   |                3 |              6 |
+| ~IIC_Busy_BUFG                    | Driver_Gyro0/Gyro_State                        |                                   |                1 |              6 |
+| ~IIC_Busy_BUFG                    | Driver_Gyro0/Reg_Addr[6]_i_2_n_0               | Driver_Gyro0/Reg_Addr[6]_i_1_n_0  |                2 |              6 |
+|  UART0/UART_Clk/clk_UART          |                                                |                                   |                2 |              7 |
+|  UART0/UART_Clk/clk_UART          | UART0/UART_Tx0/Send_Buffer[6]_i_1_n_0          |                                   |                2 |              7 |
+|  Tx_ACK_BUFG                      | UART_Send0/Send_Buffer[7]_i_1__0_n_0           |                                   |                5 |              8 |
+| ~IIC_Busy_BUFG                    | Driver_Gyro0/Gyro_Data_Z_FIFO[7]_i_1_n_0       |                                   |                3 |              8 |
+| ~IIC_Busy_BUFG                    | Driver_Gyro0/Gyro_Data_X_FIFO[15]_i_1_n_0      |                                   |                2 |              8 |
+| ~IIC_Busy_BUFG                    | Driver_Gyro0/Gyro_Data_Y_FIFO[15]_i_1_n_0      |                                   |                1 |              8 |
+| ~IIC_Busy_BUFG                    | Driver_Gyro0/Mag_Data_X_FIFO[7]_i_1_n_0        |                                   |                2 |              8 |
+| ~IIC_Busy_BUFG                    | Driver_Gyro0/Mag_Data_Y_FIFO[15]_i_1_n_0       |                                   |                1 |              8 |
+| ~IIC_Busy_BUFG                    | Driver_Gyro0/Gyro_Data_X_FIFO[7]_i_1_n_0       |                                   |                3 |              8 |
+| ~IIC_Busy_BUFG                    | Driver_Gyro0/Mag_Data_X_FIFO[15]_i_1_n_0       |                                   |                2 |              8 |
+| ~IIC_Busy_BUFG                    | Driver_Gyro0/Mag_Data_Y_FIFO[7]_i_1_n_0        |                                   |                3 |              8 |
+| ~IIC_Busy_BUFG                    | Driver_Gyro0/Mag_Data_Z_FIFO[15]_i_1_n_0       |                                   |                2 |              8 |
+| ~IIC_Busy_BUFG                    | Driver_Gyro0/Temp_Data_FIFO[15]_i_1_n_0        |                                   |                1 |              8 |
+| ~IIC_Busy_BUFG                    | Driver_Gyro0/Gyro_Data_Y_FIFO[7]_i_1_n_0       |                                   |                1 |              8 |
+| ~IIC_Busy_BUFG                    | Driver_Gyro0/Mag_Data_Z_FIFO[7]_i_1_n_0        |                                   |                2 |              8 |
+| ~IIC_Busy_BUFG                    | Driver_Gyro0/Temp_Data_FIFO[7]_i_1_n_0         |                                   |                3 |              8 |
+|  Tx_ACK_BUFG                      | UART_Send0/State_Mag_Cnt                       |                                   |                2 |             10 |
+|  Tx_ACK_BUFG                      | UART_Send0/State_Gyro_Cnt                      |                                   |                2 |             10 |
+| ~IIC_Busy_BUFG                    | Driver_Gyro0/FSM_onehot_Init_State[10]_i_1_n_0 |                                   |                4 |             16 |
+|  clk_10/inst/clk_out1             |                                                | Driver_Gyro0/Enable_reg_0         |               10 |             24 |
+|  clk_10/inst/clk_out1             |                                                | UART0/UART_Clk/Count[0]_i_1_n_0   |                8 |             32 |
+|  clk_10/inst/clk_out1             |                                                | Driver_Gyro0/Clk_Division0/Count0 |                8 |             32 |
+|  clk_10/inst/clk_out1             |                                                | Driver_Gyro0/Clk_Division1/Count0 |                8 |             32 |
++-----------------------------------+------------------------------------------------+-----------------------------------+------------------+----------------+
+
+
